@@ -17,6 +17,8 @@ class BlogPostsTableSeeder extends Seeder
     {
       $author = User::where('email', '=', 'clarkfrog@gmail.com')->get();
       $postCat = PostCategory::where('name', '=', 'Report')->get();
+
+      // print_r
         
       // id, author_id, category_id, title, seo_title, excerpt,
       // body, image, slug, meta_description, status, featured,

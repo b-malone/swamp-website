@@ -12,6 +12,6 @@ class Post extends Model
    * @var string
    */
   protected $table = 'blog_posts';
-
+  protected $primaryKey = "id";
 
 }
