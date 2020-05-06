@@ -17,7 +17,6 @@ class CategoriesTableSeeder extends Seeder
     {
       // id, parent_id, order, name, slug, created_at, updated_at
       DB::table('categories')->insert([
-          'id' => 3,
           'parent_id' => NULL,
           'order' => 1,
           'name' => 'Report',
@@ -27,7 +26,6 @@ class CategoriesTableSeeder extends Seeder
       ]);
 
       DB::table('categories')->insert([
-          'id' => 4,
           'parent_id' => NULL,
           'order' => 2,
           'name' => 'News',
@@ -37,7 +35,6 @@ class CategoriesTableSeeder extends Seeder
       ]);
 
       DB::table('categories')->insert([
-          'id' => 5,
           'parent_id' => NULL,
           'order' => 3,
           'name' => 'Event',

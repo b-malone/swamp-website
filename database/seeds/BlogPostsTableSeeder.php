@@ -3,7 +3,8 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-
+use App\User;
+use App\PostCategory;
 
 class BlogPostsTableSeeder extends Seeder
 {
@@ -14,19 +15,16 @@ class BlogPostsTableSeeder extends Seeder
      */
     public function run()
     {
-      // // SETUP Categories for POSTS first
-      // $this->call([
-      //   CategoriesTableSeeder::class
-      // ]);
-
+      $author = User::where('email', '=', 'clarkfrog@gmail.com')->get();
+      $postCat = PostCategory::where('name', '=', 'Report')->get();
+        
       // id, author_id, category_id, title, seo_title, excerpt,
       // body, image, slug, meta_description, status, featured,
       // created_at, updated_at, tags, published_date
       // ADD Existing Post(s)
       DB::table('blog_posts')->insert([
-        'id' => 2,
-        'author_id' => 2,
-        'category_id' => 3,
+        'author_id' => $author->id,
+        'category_id' => $postCat->id,
         'title' => 'Initial Findings Report',
         'seo_title' => NULL,
         'excerpt' => 'Our first report is out! Read about our initial findings from 2009.',
