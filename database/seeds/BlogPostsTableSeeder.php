@@ -15,8 +15,8 @@ class BlogPostsTableSeeder extends Seeder
      */
     public function run()
     {
-      $author = User::where('email', '=', 'clarkfrog@gmail.com')->get();
-      $postCat = PostCategory::where('name', '=', 'Report')->get();
+      // $author = User::where('email', '=', 'clarkfrog@gmail.com')->get();
+      // $postCat = PostCategory::where('name', '=', 'Report')->get();
 
       // print_r
         
@@ -25,8 +25,8 @@ class BlogPostsTableSeeder extends Seeder
       // created_at, updated_at, tags, published_date
       // ADD Existing Post(s)
       DB::table('blog_posts')->insert([
-        'author_id' => $author->id,
-        'category_id' => $postCat->id,
+        'author_id' => 1,
+        'category_id' => 1,
         'title' => 'Initial Findings Report',
         'seo_title' => NULL,
         'excerpt' => 'Our first report is out! Read about our initial findings from 2009.',
