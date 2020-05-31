@@ -4,6 +4,17 @@ env: flex
 runtime_config:
   document_root: public
 
+# This sample incurs costs to run on the App Engine flexible environment.
+# The settings below are to reduce costs during testing and are not appropriate
+# for production use. For more information, see:
+# https://cloud.google.com/appengine/docs/flexible/php/configuring-your-app-with-app-yaml
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
+
 env_variables:
   ## Put production environment variables here.
   APP_KEY: base64:Nd3/Hj5EXzipwHLRNgbVs26ezVj4iq9xL0s8ETWEoWo=
