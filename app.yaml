@@ -1,4 +1,8 @@
-runtime: php72
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
 
 env_variables:
   ## Put production environment variables here.
